@@ -1,0 +1,35 @@
+# create and activate virtual enviroment
+python -m venv venv
+source venv/bin/activate
+
+# install dependencies
+pip install django djangorestframework django-cors-headers
+
+# save requirements
+pip freeze > requirements.txt
+pip install -r requirements.txt
+
+# create django project
+django-admin startproject blog_project .
+
+# create app
+python manage.py startapp blog
+
+# create models.py
+
+# run migrations
+python manage.py makemigrations
+python manage.py migrate
+
+
+# create serializers.py
+# update views.py
+# create app/urls.py
+# update project/urls.py
+
+# run server
+python manage.py runserver
+
+# test
+List/Create posts → http://127.0.0.1:8000/api/posts/
+Retrieve/Update/Delete a post → http://127.0.0.1:8000/api/posts/1/ (replace 1 with a real ID)
