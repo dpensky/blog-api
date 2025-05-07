@@ -33,3 +33,8 @@ python manage.py runserver
 # test
 List/Create posts → http://127.0.0.1:8000/api/posts/
 Retrieve/Update/Delete a post → http://127.0.0.1:8000/api/posts/1/ (replace 1 with a real ID)
+
+# update tests.py
+
+# run tests
+python manage.py test
