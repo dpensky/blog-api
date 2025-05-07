@@ -38,3 +38,15 @@ Retrieve/Update/Delete a post → http://127.0.0.1:8000/api/posts/1/ (replace 1 
 
 # run tests
 python manage.py test
+
+# install coverage
+pip install coverage
+
+# run coverage
+coverage run --source='.' manage.py test
+
+# show coverage report
+coverage report
+
+# show urls
+python manage.py show_urls
