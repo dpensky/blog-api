@@ -8,11 +8,7 @@ class CommentCreateView(generics.CreateAPIView):
 
     def perform_create(self, serializer):
         post = Post.objects.get(id=self.kwargs['post_id'])
-        serializer.save(post=post)
-
-# CommentCreateView: This view allows creating a comment for a specific post. 
-# The perform_create method ensures that the post is correctly linked to the comment when it is created.
-# We’ll use post_id to specify which post the comment belongs to.
+        serializer.save(post=post, author=self.request.user)
 
 class CommentListView(generics.ListAPIView):
     serializer_class = CommentSerializer
@@ -21,22 +17,13 @@ class CommentListView(generics.ListAPIView):
         post_id = self.kwargs['post_id']
         return Comment.objects.filter(post_id=post_id)
 
-
 class PostListCreateView(generics.ListCreateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
 
 class PostRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-
-
-# What these views do:
-# ListCreateAPIView:
-# GET → list all posts
-# POST → create a new post
-# RetrieveUpdateDestroyAPIView:
-# GET → retrieve a single post
-# PUT / PATCH → update
-# DELETE → delete
