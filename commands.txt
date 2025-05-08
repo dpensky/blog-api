@@ -3,7 +3,7 @@ python -m venv venv
 source venv/bin/activate
 
 # install dependencies
-pip install django djangorestframework django-cors-headers
+pip install django djangorestframework django-cors-headers drf-yasg
 
 # save requirements
 pip freeze > requirements.txt
@@ -50,3 +50,8 @@ coverage report
 
 # show urls
 python manage.py show_urls
+
+
+🔹 http://localhost:8000/swagger/ → Swagger UI (interactive)
+
+🔸 http://localhost:8000/redoc/ → ReDoc UI (cleaner, read-only)

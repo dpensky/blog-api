@@ -57,6 +57,8 @@ python manage.py createsuperuser
 ```bash
 python manage.py runserver
 ```
+[Swagger UI](http://localhost:8000/swagger/)  
+[ReDoc UI](http://localhost:8000/redoc/)
 
 ## 🧪 Running Tests
 ```bash
@@ -68,14 +70,14 @@ coverage report
 
 ## 🧰 API Endpoints (Examples)
 ```text
-Method	Endpoint	                    Description
-GET	    /posts/	                        List all posts
-POST	/posts/	                        Create a new post
-GET	    /posts/<id>/	                Retrieve a single post
-PUT	    /posts/<id>/	                Update a post (author only)
-DELETE	/posts/<id>/	                Delete a post (author only)
-GET	    /posts/<id>/comments/	        List comments for a post
-POST	/posts/<id>/comments/create/	Create a comment (auth user)
+Method  Endpoint                        Description
+GET	    /posts/                         List all posts
+POST    /posts/                         Create a new post
+GET	    /posts/<id>/                    Retrieve a single post
+PUT	    /posts/<id>/                    Update a post (author only)
+DELETE  /posts/<id>/                    Delete a post (author only)
+GET	    /posts/<id>/comments/           List comments for a post
+POST    /posts/<id>/comments/create/    Create a comment (auth user)
 ```
 
 ⚠️ All POST, PUT, and DELETE requests require authentication.
@@ -85,7 +87,7 @@ POST	/posts/<id>/comments/create/	Create a comment (auth user)
 ## 📄 Authentication
 The project supports token authentication and is compatible with JWT if desired. You can add djangorestframework-simplejwt for JWT-based login/logout.
 
---
+---
 
 ## 📌 TODO / Future Improvements
 - Add permissions (e.g., only authors can edit/delete their content)
@@ -94,14 +96,14 @@ The project supports token authentication and is compatible with JWT if desired.
 - Swagger/OpenAPI documentation
 - Docker support
 
---
+---
 
 ## 🧑‍💻 Author
 Darcio Pensky  
 [LinkedIn](https://www.linkedin.com/in/dpensky/)  
 [GitHub](https://github.com/dpensky)  
 
---
+---
 
 # 📜 License
 MIT
