@@ -90,11 +90,12 @@ The project supports token authentication and is compatible with JWT if desired.
 ---
 
 ## 📌 TODO / Future Improvements
-- Add permissions (e.g., only authors can edit/delete their content)
-- Pagination and search for posts
-- Like system or post categories
-- Swagger/OpenAPI documentation
-- Docker support
+[ ] Add authentication
+[ ] Add permissions (e.g., only authors can edit/delete their content)
+[ ] Pagination and search for posts
+[ ] Like system or post categories
+[X] Swagger/OpenAPI documentation
+[ ] Docker support
 
 ---
 

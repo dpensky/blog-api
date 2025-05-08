@@ -3,7 +3,7 @@ python -m venv venv
 source venv/bin/activate
 
 # install dependencies
-pip install django djangorestframework django-cors-headers drf-yasg
+pip install django djangorestframework django-cors-headers drf-yasg djangorestframework-simplejwt
 
 # save requirements
 pip freeze > requirements.txt
